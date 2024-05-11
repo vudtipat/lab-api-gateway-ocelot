@@ -15,7 +15,7 @@ namespace Customer.Application.Features.Queries.CustomerQuery
 
 		public async Task<Domain.Model.Customer> Handle(CustomerMeQuery request, CancellationToken cancellationToken)
 		{
-			var result = await _customerRepositoty.GetCustomer(request.CustomerID); 
+			var result = await _customerRepositoty.GetCustomerById(request.CustomerID); 
 
 			return result;
 		}

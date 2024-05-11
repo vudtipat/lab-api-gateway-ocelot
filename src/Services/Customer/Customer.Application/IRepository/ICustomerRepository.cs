@@ -3,7 +3,7 @@ namespace Customer.Application.IRepository
 {
 	public interface ICustomerRepository: IDisposable
     {
-        Task<Domain.Model.Customer> GetCustomer(string customerId);
+        Task<Domain.Model.Customer> GetCustomerById(string customerId);
 	}
 }
 

@@ -14,7 +14,7 @@ namespace Customer.Infrastructure.Repository
 			_context = context;
 		}
 
-		public async Task<Domain.Model.Customer> GetCustomer(string customerId)
+		public async Task<Domain.Model.Customer> GetCustomerById(string customerId)
 		{
 			return await _context.Customer.Where(p => p.CustomerID == customerId).FirstOrDefaultAsync();
 		}
