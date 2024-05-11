@@ -14,12 +14,16 @@
     <None Remove="Features\Commands\" />
     <None Remove="Features\Queries\" />
     <None Remove="Features\Queries\TestCQRS\" />
+    <None Remove="Features\Queries\CustomerQuery\" />
+    <None Remove="IRepository\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
     <Folder Include="Features\Commands\" />
     <Folder Include="Features\Queries\" />
     <Folder Include="Features\Queries\TestCQRS\" />
+    <Folder Include="Features\Queries\CustomerQuery\" />
+    <Folder Include="IRepository\" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
