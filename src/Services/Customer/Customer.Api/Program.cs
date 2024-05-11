@@ -1,5 +1,4 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Customer.Application;
 using Customer.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddInfrastructureService(builder.Configuration);
+builder.Services
+    .AddInfrastructureService(builder.Configuration)
+    .AddApplicationService(builder.Configuration);
 
 var app = builder.Build();
 
