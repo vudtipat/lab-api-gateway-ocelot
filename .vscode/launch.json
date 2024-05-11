@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Customer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "BuildCustomer",
+            "program": "${workspaceRoot}/src/Services/Customer/Customer.Api/bin/Debug/net7.0/Customer.Api.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "launchSettingsFilePath": "${workspaceFolder}/src/Services/Customer/Customer.Api/Properties/launchSettings.json",
+            "launchSettingsProfile": "https"            
+        },
+        {
+            "name": "Order",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "BuildOrder",
+            "program": "${workspaceRoot}/src/Services/Order/Order.Api/bin/Debug/net7.0/Order.Api.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "launchSettingsFilePath": "${workspaceFolder}/src/Services/Order/Order.Api/Properties/launchSettings.json",
+            "launchSettingsProfile": "https"             
+        },
+        {
+            "name": "Payment",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "BuildPayment",
+            "program": "${workspaceRoot}/src/Services/Payment/Payment.Api/bin/Debug/net7.0/Payment.Api.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "launchSettingsFilePath": "${workspaceFolder}/src/Services/Payment/Payment.Api/Properties/launchSettings.json",
+            "launchSettingsProfile": "https"            
+        },
+        {
+            "name": "Product",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "BuildProduct",
+            "program": "${workspaceRoot}/src/Services/Product/Product.Api/bin/Debug/net7.0/Product.Api.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "launchSettingsFilePath": "${workspaceFolder}/src/Services/Product/Product.Api/Properties/launchSettings.json",
+            "launchSettingsProfile": "https"             
+        },        
+    ],
+    "compounds": [
+        {
+            "name": "Run All Services",
+            "configurations": [
+                "Customer",
+                "Order",
+                "Payment",
+                "Product"
+            ],
+            "stopAll": true
+        }
+    ]
+}
