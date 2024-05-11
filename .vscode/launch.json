@@ -11,11 +11,11 @@
             "preLaunchTask": "BuildCustomer",
             "program": "${workspaceRoot}/src/Services/Customer/Customer.Api/bin/Debug/net7.0/Customer.Api.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/src/Services/Customer/Customer.Api",
             "stopAtEntry": false,
             "console": "internalConsole",
             "launchSettingsFilePath": "${workspaceFolder}/src/Services/Customer/Customer.Api/Properties/launchSettings.json",
-            "launchSettingsProfile": "https"            
+            "launchSettingsProfile": "https"
         },
         {
             "name": "Order",
@@ -24,11 +24,11 @@
             "preLaunchTask": "BuildOrder",
             "program": "${workspaceRoot}/src/Services/Order/Order.Api/bin/Debug/net7.0/Order.Api.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/src/Services/Order/Order.Api",
             "stopAtEntry": false,
             "console": "internalConsole",
             "launchSettingsFilePath": "${workspaceFolder}/src/Services/Order/Order.Api/Properties/launchSettings.json",
-            "launchSettingsProfile": "https"             
+            "launchSettingsProfile": "https"
         },
         {
             "name": "Payment",
@@ -37,11 +37,11 @@
             "preLaunchTask": "BuildPayment",
             "program": "${workspaceRoot}/src/Services/Payment/Payment.Api/bin/Debug/net7.0/Payment.Api.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/src/Services/Payment/Payment.Api",
             "stopAtEntry": false,
             "console": "internalConsole",
             "launchSettingsFilePath": "${workspaceFolder}/src/Services/Payment/Payment.Api/Properties/launchSettings.json",
-            "launchSettingsProfile": "https"            
+            "launchSettingsProfile": "https"
         },
         {
             "name": "Product",
@@ -50,11 +50,11 @@
             "preLaunchTask": "BuildProduct",
             "program": "${workspaceRoot}/src/Services/Product/Product.Api/bin/Debug/net7.0/Product.Api.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/src/Services/Product/Product.Api",
             "stopAtEntry": false,
             "console": "internalConsole",
             "launchSettingsFilePath": "${workspaceFolder}/src/Services/Product/Product.Api/Properties/launchSettings.json",
-            "launchSettingsProfile": "https"             
+            "launchSettingsProfile": "https"
         },        
     ],
     "compounds": [
