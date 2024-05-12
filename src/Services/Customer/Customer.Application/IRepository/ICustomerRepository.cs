@@ -5,7 +5,7 @@ namespace Customer.Application.IRepository
     {
         Task<Domain.Model.Customer> GetCustomerById(string customerId);
         Task<List<Domain.Model.Customer>> GetCustomerAll();
-        void AddCustomer(Domain.Model.Customer customer);
+        Task AddCustomer(Domain.Model.Customer customer);
         void RemoveCustomerById(string customerId);
         void UpdateCustomer(Domain.Model.Customer customer);
 	}

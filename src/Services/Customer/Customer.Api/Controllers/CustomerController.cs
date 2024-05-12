@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Azure;
-using Customer.Application.Features.Queries.CustomerQuery;
-using Customer.Application.Features.Queries.TestCQRS;
+using Customer.Application.Features.Commands;
+using Customer.Application.Features.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Customer.Api.Controllers
 {
-    [Route("/api/customer")]
+    [Route("/api/customers")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
@@ -23,21 +23,51 @@ namespace Customer.Api.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
+        [HttpGet("test")]
         public async Task<IActionResult> Test()
         {
             var response = await _mediator.Send(new TestCQRSQuery());
             return Ok(response);
         }
 
-        [HttpGet("/me")]
+        [HttpGet]
+        public async Task<IActionResult> GetCustomerAll()
+        {
+            var response = await _mediator.Send(new CustomerAllQuery());
+
+            return Ok(response);
+        }
+
+        [HttpGet("me")]
         public async Task<IActionResult> CustomerMeQueryAsync([FromHeader] string customerId)
         {
-            var response = await _mediator.Send(new CustomerMeQuery() {
+            var response = await _mediator.Send(new CustomerMeQuery()
+            {
                 CustomerID = customerId
             });
 
             return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateCustomerCommandAsync([FromBody] Domain.Model.Customer customer)
+        {
+            await _mediator.Send(new AddCustomerCommand() { customer = customer});
+            return Created("",null);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCustomerCommandAsync([FromQuery] string customerId)
+        {
+            await _mediator.Send(new DeleteCustomerCommand() { customerId = customerId });
+            return NoContent();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> EditCustomerCommandAsync([FromBody] Domain.Model.Customer customer)
+        {
+            await _mediator.Send(new EditCustomerCommand() { customer = customer });
+            return NoContent();
         }
     }
 }

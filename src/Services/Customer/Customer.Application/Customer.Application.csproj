@@ -16,6 +16,10 @@
     <None Remove="Features\Queries\TestCQRS\" />
     <None Remove="Features\Queries\CustomerQuery\" />
     <None Remove="IRepository\" />
+    <None Remove="Features\Queries\CustomerAllQuery\" />
+    <None Remove="Features\Commands\AddCustomerCommand\" />
+    <None Remove="Features\Commands\EditCustomerCommand\" />
+    <None Remove="Features\Commands\DeleteCustomerCommand\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
@@ -24,6 +28,10 @@
     <Folder Include="Features\Queries\TestCQRS\" />
     <Folder Include="Features\Queries\CustomerQuery\" />
     <Folder Include="IRepository\" />
+    <Folder Include="Features\Queries\CustomerAllQuery\" />
+    <Folder Include="Features\Commands\AddCustomerCommand\" />
+    <Folder Include="Features\Commands\EditCustomerCommand\" />
+    <Folder Include="Features\Commands\DeleteCustomerCommand\" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>

@@ -23,7 +23,7 @@ namespace Customer.Infrastructure.Repository
             return await _context.Customer.ToListAsync();
         }
 
-        public async void AddCustomer(Domain.Model.Customer customer)
+        public async Task AddCustomer(Domain.Model.Customer customer)
         {
             await _context.Customer.AddAsync(customer);
             _context.SaveChanges();
