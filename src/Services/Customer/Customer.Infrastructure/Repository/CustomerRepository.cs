@@ -19,6 +19,29 @@ namespace Customer.Infrastructure.Repository
 			return await _context.Customer.Where(p => p.CustomerID == customerId).FirstOrDefaultAsync();
 		}
 
+        public async Task<List<Domain.Model.Customer>> GetCustomerAll(){
+            return await _context.Customer.ToListAsync();
+        }
+
+        public async void AddCustomer(Domain.Model.Customer customer)
+        {
+            await _context.Customer.AddAsync(customer);
+            _context.SaveChanges();
+        }
+
+        public void RemoveCustomerById(string customerId)
+        {
+            var customer = _context.Customer.Where(p => p.CustomerID == customerId).FirstOrDefault();
+            _context.Customer.Remove(customer);
+            _context.SaveChanges();
+        }
+
+        public void UpdateCustomer(Domain.Model.Customer customer)
+        {
+            _context.Customer.Update(customer);
+            _context.SaveChanges();
+        }
+
         private bool disposed = false;
 
         protected virtual void Dispose(bool disposing)
@@ -37,7 +60,7 @@ namespace Customer.Infrastructure.Repository
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
+        }        
     }
 }
 

@@ -11,7 +11,7 @@ namespace Customer.Infrastructure.Persistance.Configurations
         {
             entity.ToTable("CUSTOMER");
 
-            entity.HasNoKey();
+            entity.HasKey(x => x.CustomerID);
 
             entity.Property(x => x.CustomerID)
                 .HasColumnName("CUSTOMER_ID");
