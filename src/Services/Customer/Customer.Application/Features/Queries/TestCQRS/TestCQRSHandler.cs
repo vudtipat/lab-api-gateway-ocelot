@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 
-namespace Customer.Application.Features.Queries.TestCQRS
+namespace Customer.Application.Features.Queries
 {
 	public class TestCQRSHandler : IRequestHandler<TestCQRSQuery, Result>
     {

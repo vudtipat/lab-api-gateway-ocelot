@@ -2,7 +2,7 @@
 using Customer.Application.IRepository;
 using MediatR;
 
-namespace Customer.Application.Features.Queries.CustomerQuery
+namespace Customer.Application.Features.Queries
 {
 	public class CustomerMeHandler : IRequestHandler<CustomerMeQuery, Domain.Model.Customer>
 	{
