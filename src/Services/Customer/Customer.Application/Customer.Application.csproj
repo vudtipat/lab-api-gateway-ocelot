@@ -20,6 +20,11 @@
     <None Remove="Features\Commands\AddCustomerCommand\" />
     <None Remove="Features\Commands\EditCustomerCommand\" />
     <None Remove="Features\Commands\DeleteCustomerCommand\" />
+    <None Remove="Features\Queries\GetAddressQuery\" />
+    <None Remove="Features\Queries\GetAllAddressQuery\" />
+    <None Remove="Features\Commands\AddAddressCommand\" />
+    <None Remove="Features\Commands\EditAddressCommand\" />
+    <None Remove="Features\Commands\DeleteAddressCommand\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
@@ -32,6 +37,11 @@
     <Folder Include="Features\Commands\AddCustomerCommand\" />
     <Folder Include="Features\Commands\EditCustomerCommand\" />
     <Folder Include="Features\Commands\DeleteCustomerCommand\" />
+    <Folder Include="Features\Queries\GetAddressQuery\" />
+    <Folder Include="Features\Queries\GetAllAddressQuery\" />
+    <Folder Include="Features\Commands\AddAddressCommand\" />
+    <Folder Include="Features\Commands\EditAddressCommand\" />
+    <Folder Include="Features\Commands\DeleteAddressCommand\" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
