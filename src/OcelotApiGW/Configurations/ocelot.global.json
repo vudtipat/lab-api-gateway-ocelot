@@ -1,0 +1,10 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7516",
+    "ServiceDiscoveryProvider": {
+      "Type": "AppConfiguration",
+      "PollingIntervalSeconds": 10000
+    }
+  }
+}
+

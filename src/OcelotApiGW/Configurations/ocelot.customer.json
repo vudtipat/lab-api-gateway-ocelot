@@ -1,0 +1,19 @@
+﻿{
+  "Routes": [
+    {
+      "ServiceName": "Customer",
+      "SwaggerKey": "Customer",
+      "DownstreamPathTemplate": "/api/v1/customers",
+      "UpstreamPathTemplate": "/customers",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "ServiceName": "Customer",
+      "SwaggerKey": "Customer",
+      "DownstreamPathTemplate": "/api/v1/customers/me",
+      "UpstreamPathTemplate": "/customers/me",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
+

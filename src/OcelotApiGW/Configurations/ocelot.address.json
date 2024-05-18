@@ -1,0 +1,19 @@
+﻿{
+  "Routes": [
+    {
+      "ServiceName": "Address",
+      "SwaggerKey": "Address",
+      "DownstreamPathTemplate": "/api/v1/addresses",
+      "UpstreamPathTemplate": "/addresses",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "ServiceName": "Address",
+      "SwaggerKey": "Address",
+      "DownstreamPathTemplate": "/api/v1/addresses/me",
+      "UpstreamPathTemplate": "/addresses/me",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}
+

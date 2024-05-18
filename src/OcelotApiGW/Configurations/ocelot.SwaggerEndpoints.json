@@ -1,0 +1,30 @@
+﻿{
+  "SwaggerEndPoints": [
+    {
+      "Key": "Customer",
+      "Config": [
+        {
+          "Name": "Customer API",
+          "Version": "v1",
+          "Service": {
+            "Name": "Customer",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "Address",
+      "Config": [
+        {
+          "Name": "Address API",
+          "Version": "v1",
+          "Service": {
+            "Name": "Address",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    }
+  ]
+}
