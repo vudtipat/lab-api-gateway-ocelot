@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Customer.Api.Controllers
 {
-    [Route("/api/v1/[controller]")]
+    [Route("/api/v1/addresses")]
     public class AddressesController : ControllerBase
     {
         private readonly IMediator _mediator;
