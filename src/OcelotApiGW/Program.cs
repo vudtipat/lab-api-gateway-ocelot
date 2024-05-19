@@ -11,6 +11,8 @@ builder.Configuration
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", true, true);
 
+builder.Services.AddHealthChecks();
+
 builder.Configuration.AddOcelotWithSwaggerSupport(options =>
 {
     options.Folder = "Configurations";
@@ -22,21 +24,21 @@ builder.Services
 
 builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHealthChecks();
-
 var app = builder.Build();
 
-app.MapControllers();
 app.UseRouting();
-app.MapHealthChecks("/probe");
 
 app.UseSwaggerForOcelotUI(opt =>
 {
     opt.PathToSwaggerGenerator = "/swagger/docs";
+});
+
+app.UseEndpoints(e =>
+{
+    e.MapHealthChecks("/probe");
 });
 
 app.UseOcelot().Wait();
