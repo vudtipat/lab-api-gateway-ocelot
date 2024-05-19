@@ -10,7 +10,7 @@ namespace Order.Infrastructure
 	{
         public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration configulation)
         {
-            services.AddDbContext<OrderContext>(option => option.UseSqlServer(configulation.GetConnectionString("CustomerConnection")));
+            services.AddDbContext<OrderContext>(option => option.UseSqlServer(configulation.GetConnectionString("OrderConnection")));
 
             return services;
         }
