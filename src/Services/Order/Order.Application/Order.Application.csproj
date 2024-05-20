@@ -8,5 +8,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Order.Domain\Order.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Repository.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="IRepository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IRepository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
   </ItemGroup>
 </Project>
