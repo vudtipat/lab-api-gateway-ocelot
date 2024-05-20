@@ -17,4 +17,14 @@
   <ItemGroup>
     <ProjectReference Include="..\Product.Application\Product.Application.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Persistance\" />
+    <None Remove="Repository\" />
+    <None Remove="Persistance\Configurations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistance\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Persistance\Configurations\" />
+  </ItemGroup>
 </Project>
