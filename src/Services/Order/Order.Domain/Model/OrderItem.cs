@@ -1,15 +1,17 @@
 ﻿using System;
 using Order.Domain.Enum;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Order.Domain.Model
 {
 	public class OrderItem
 	{
         [Key]
-        public string OrderItemId { get; set; }
-        public string OrderId { get; set; }
-        public string ProductId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid OrderItemId { get; set; }
+        public Guid OrderId { get; set; }
+        public int ProductId { get; set; }
         public int Quantity { get; set; }
         public Double UnitPrice { get; set; }
         public Double TotalAmount { get; set; }
