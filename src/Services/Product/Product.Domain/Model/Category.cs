@@ -6,8 +6,9 @@ namespace Product.Domain.Model
 	public class Category
 	{
         [Key]
-        public string CategoryId { get; set; }
-        public string CategoryName { get; set; }        
+        public int CategoryId { get; set; }
+        public string CategoryNameEN { get; set; }
+        public string CategoryNameTH { get; set; }
         public string CreatedBy { get; set; }
         public DateTime? CreatedAt { get; set; }
         public string UpdatedBy { get; set; }
