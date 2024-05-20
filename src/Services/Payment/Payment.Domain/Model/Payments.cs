@@ -1,13 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Payment.Domain.Model
 {
 	public class Payments
 	{
 		[Key]
-		public string PaymentId { set; get; }
-        public string OrderId { set; get; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid PaymentId { set; get; }
+        public Guid OrderId { set; get; }
         public DateTime? PaymentDate { get; set; }
         public string PaymentMethod { get; set; }
         public Double TotalAmount { get; set; }
