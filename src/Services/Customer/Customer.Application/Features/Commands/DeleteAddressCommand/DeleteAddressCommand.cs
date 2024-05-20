@@ -5,7 +5,7 @@ namespace Customer.Application.Features.Commands
 {
 	public class DeleteAddressCommand: IRequest
 	{
-		public string customerId { set; get; }
+		public Guid customerId { set; get; }
 	}
 }
 

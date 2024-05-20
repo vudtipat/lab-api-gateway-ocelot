@@ -31,7 +31,7 @@ namespace Customer.Api.Controllers
         }
 
         [HttpGet("me")]
-        public async Task<IActionResult> GetAddressAsync([FromHeader] string customerId)
+        public async Task<IActionResult> GetAddressAsync([FromHeader] Guid customerId)
         {
             var response = await _mediator.Send(new GetAddressQuery() { customerId = customerId });
 
@@ -55,7 +55,7 @@ namespace Customer.Api.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveAddressAsync([FromHeader] string customerId)
+        public async Task<IActionResult> RemoveAddressAsync([FromHeader] Guid customerId)
         {
             await _mediator.Send(new DeleteAddressCommand() { customerId = customerId });
 

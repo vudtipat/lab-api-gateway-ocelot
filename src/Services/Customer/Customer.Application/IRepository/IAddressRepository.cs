@@ -5,10 +5,10 @@ namespace Customer.Application.IRepository
 {
 	public interface IAddressRepository: IDisposable
     {
-        Task<Address> GetAddressByCustId(string customerId);
+        Task<Address> GetAddressByCustId(Guid customerId);
         Task<List<Address>> GetAddressAll();
         Task AddAddress(Address address);
-        void RemoveAddressByCustId(string customerId);
+        void RemoveAddressByCustId(Guid customerId);
         void UpdateAddress(Address address);
     }
 }

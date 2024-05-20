@@ -1,9 +1,14 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Customer.Domain.Model
 {
     public class Address
     {
-        public int AddressId { set; get; }
-        public string CustomerId { set; get; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid AddressId { set; get; }
+        public Guid CustomerId { set; get; }
         public string AddressLine1 { set; get; }
         public string AddressLine2 { set; get; }
         public int SubDistrict { set; get; }

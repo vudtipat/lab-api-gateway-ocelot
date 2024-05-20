@@ -14,7 +14,7 @@ namespace Customer.Infrastructure.Repository
 			_context = context;
 		}
 
-		public async Task<Domain.Model.Customer> GetCustomerById(string customerId)
+		public async Task<Domain.Model.Customer> GetCustomerById(Guid customerId)
 		{
 			return await _context.Customer.Where(p => p.CustomerID == customerId).FirstOrDefaultAsync();
 		}
@@ -29,7 +29,7 @@ namespace Customer.Infrastructure.Repository
             _context.SaveChanges();
         }
 
-        public void RemoveCustomerById(string customerId)
+        public void RemoveCustomerById(Guid customerId)
         {
             var customer = _context.Customer.Where(p => p.CustomerID == customerId).FirstOrDefault();
             _context.Customer.Remove(customer);

@@ -18,6 +18,10 @@ namespace Customer.Infrastructure.Persistance
 
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.ApplyConfiguration(new AddressConfiguration());
+
+            modelBuilder.Entity<Customer.Domain.Model.Customer>()
+                .Property(e => e.CustomerID)
+                .ValueGeneratedOnAdd();
         }
 
         //Uncomment this section when want to migrate to database

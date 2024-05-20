@@ -16,11 +16,17 @@ namespace Customer.Infrastructure.Persistance.Configurations
             entity.Property(x => x.CustomerID)
                 .HasColumnName("CUSTOMER_ID");
 
-            entity.Property(x => x.FirstName)
-                .HasColumnName("FIRST_NAME");
+            entity.Property(x => x.FirstNameEN)
+                .HasColumnName("FIRST_NAME_EN");
 
-            entity.Property(x => x.LastName)
-                .HasColumnName("LAST_NAME");
+            entity.Property(x => x.LastNameEN)
+                .HasColumnName("LAST_NAME_EN");
+
+            entity.Property(x => x.FirstNameTH)
+                .HasColumnName("FIRST_NAME_TH");
+
+            entity.Property(x => x.LastNameTH)
+                .HasColumnName("LAST_NAME_TH");
 
             entity.Property(x => x.Email)
                 .HasColumnName("EMAIL");

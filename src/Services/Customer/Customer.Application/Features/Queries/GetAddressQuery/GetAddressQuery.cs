@@ -6,7 +6,7 @@ namespace Customer.Application.Features.Queries
 {
 	public class GetAddressQuery: IRequest<Address>
 	{
-		public string customerId { set; get; }
+		public Guid customerId { set; get; }
 	}
 }
 

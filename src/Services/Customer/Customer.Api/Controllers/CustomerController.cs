@@ -39,7 +39,7 @@ namespace Customer.Api.Controllers
         }
 
         [HttpGet("me")]
-        public async Task<IActionResult> CustomerMeQueryAsync([FromHeader] string customerId)
+        public async Task<IActionResult> CustomerMeQueryAsync([FromHeader] Guid customerId)
         {
             var response = await _mediator.Send(new CustomerMeQuery()
             {
@@ -57,7 +57,7 @@ namespace Customer.Api.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteCustomerCommandAsync([FromQuery] string customerId)
+        public async Task<IActionResult> DeleteCustomerCommandAsync([FromQuery] Guid customerId)
         {
             await _mediator.Send(new DeleteCustomerCommand() { customerId = customerId });
             return NoContent();
